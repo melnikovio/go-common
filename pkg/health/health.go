@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"go-common/pkg/common"
+	"github.com/melnikovio/go-common/pkg/common"
 
 	"github.com/gorilla/mux"
 )

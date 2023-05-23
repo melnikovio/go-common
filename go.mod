@@ -1,4 +1,4 @@
-module go-common
+module github.com/melnikovio/go-common
 
 go 1.20
 
