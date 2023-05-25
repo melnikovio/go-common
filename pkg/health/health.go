@@ -9,13 +9,11 @@ import (
 	"github.com/gorilla/mux"
 )
 
-
 type Handler struct {
-
 }
 
 func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, common.GetReponse())		
+	fmt.Fprint(w, common.GetReponse())
 }
 
 func GetStatusHandler() (handler http.Handler) {

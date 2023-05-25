@@ -11,13 +11,13 @@ import (
 
 func HandleSigTerm() {
 	signalChannel := make(chan os.Signal, 2)
-    signal.Notify(signalChannel, os.Interrupt, syscall.SIGTERM)
-    go func() {
-        sig := <-signalChannel
-        switch sig {
-        default:
+	signal.Notify(signalChannel, os.Interrupt, syscall.SIGTERM)
+	go func() {
+		sig := <-signalChannel
+		switch sig {
+		default:
 			fmt.Println(common.GetSigTermMessage())
 			os.Exit(0)
-        }
-    }()
+		}
+	}()
 }
